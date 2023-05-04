@@ -40,6 +40,11 @@ label{
     cursor: pointer;
 }
 
+.btnIn:focus{ 
+    border: none;
+    background-color: rgb(36,37,60);
+}
+
 .Lt3{ 
     margin-left: 130px;
 }

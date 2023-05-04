@@ -7,29 +7,32 @@ import {useNavigate} from "react-router-dom";
 
 const SignInPatient = () => {
     let navigate = useNavigate();
+  const [display, setdisplay] = useState("");
 
     const [EmailIn, setEmailIn] = useState("");
     const [PasswordIn, setPasswordIn] = useState("");
-    const [allItems, setallItems] = useState([]);
 
-    const getPost = () => { 
+    const [allItems, setallItems] = useState([]);
+   
+
+    const validateButton = () => { 
         axios.post("http://localhost:2000/user/signIn", {EmailIn,PasswordIn}).then((response) => { 
-            console.log(response);
+            console.log(response.data);
+            if(response.data.status){ 
+                navigate("/DashboardDoctor");
+            }else{ 
+                setdisplay(response.data.message)
+            }
         }).catch((err) => { 
             console.log(err);
         })
-        
-    }
 
 
 
-
-    const validateButton = () => { 
-
-        axios.get("http://localhost:2000/user/SignUpDoctors").then((response) => { 
-            console.log(response.data)
-            setallItems(response.data)
-        })
+        // axios.get("http://localhost:2000/user/SignUpDoctors").then((response) => { 
+        //     console.log(response.data)
+        //     setallItems(response.data)
+        // })
       
         // allItems.map((eachItem) => { 
         //     console.log(eachItem.Email,eachItem.Password);
@@ -53,9 +56,9 @@ const SignInPatient = () => {
     <div> 
         <div className="containerAll "> 
     
-        <button  className="btn btn-info">Click to get Sign up deatails</button>
-        <button onClick={getPost} className="btn btn-danger">Click to post Sign In details</button>
             <h3 className='text-white text-center'> Sign In as a Patient</h3>
+
+           <div className="text-danger text-center">{display}</div>
             
             <input onChange={(e) => setEmailIn(e.target.value)} type="text" className="form-control mt-3   ink" placeholder='Email' /> 
             
