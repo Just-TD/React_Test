@@ -19,7 +19,8 @@ const SignInPatient = () => {
         axios.post("http://localhost:2000/user/signIn", {EmailIn,PasswordIn}).then((response) => { 
             console.log(response.data);
             if(response.data.status){ 
-                navigate("/DashboardDoctor");
+                alert("I will open the patient Dashboard later but you are correct");
+                // navigate("/DashboardDoctor");
             }else{ 
                 setdisplay(response.data.message)
             }

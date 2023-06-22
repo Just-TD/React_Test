@@ -36,6 +36,7 @@ header {
 	padding: 0 2rem;
 	background-color: var(--mainColor);
 	color: var(--textColor);
+	position: relative;
 }
 
 nav a {
@@ -100,5 +101,15 @@ nav {
 	nav a {
 		font-size: 1.5rem;
 	}
+}
+
+.nav-btn1{ 
+	background-color: transparent;
+	color: white;
+	padding: 8px 30px 8px 30px;
+	border-radius: 10px;
+	border: 2px solid white;
+	cursor: pointer;
+	margin-left: 70px;
 }
 

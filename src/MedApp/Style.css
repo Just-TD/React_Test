@@ -1,3 +1,11 @@
+*{ 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
 .containerAll{ 
     background-color: rgb(36,37,60);
     border-radius: 10px;
@@ -65,15 +73,124 @@ label{
 
 }
 
-ul{ 
-    list-style-type: none;
-    margin-top: 17px;
+
+
+.logo{ 
+    color: white;
+    margin-left: 30px;
+    line-height: 60px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+nav{ 
+    background-color: white;
+    width: 100%;
+}
+
+
+
+.section { 
+    display: flex;
+    
+}
+.containImg{ 
+    width: 1000px;
+}
+
+
+/* 
+.menuOverlay { 
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: teal;
+    top: 80px;
+    left: 0%;
+    text-align: center;
+    transition: all .5s;
+    display: none;
+    
+} */
+
+.checkIn { 
+    display: none;
+}
+
+
+@media (max-width : 900px) { 
+    .checkBtn { 
+        font-size: 30px;
+        position: relative;
+        left: 80%;
+        line-height: 20px;
+        display: block;
+    }
+
+    ul li a{ 
+        display: none;
+    }
+
+    .menuOverlay { 
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: teal;
+        top: 80px;
+        left: 0%;
+        text-align: center;
+        transition: all .5s;
+        display: none;
+        margin-left: 0%;
+        
+        
+    }
+
    
 }
-ul li{ 
-    display: inline;
-    margin-left: 10px;
-   
+
+/* 
+@media (max-width: 952px) { 
+    .logo { 
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    ul li a { 
+        font-size: 16px;
+    }
+}
+
+@media (max-width : 858px) { 
+    .checkBtn{ 
+        display: block;
+    }
+
+    ul { 
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: teal;
+        top: 80px;
+        left: -50%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    ul li  { 
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    ul li a { 
+        font-size: 20px;
+    }
+
+    a:hover,a:active { 
+        background: none;
+        color: crimson;
+    }
 }
 
 @media only screen and (max-width: 300px) {
@@ -84,4 +201,4 @@ ul li{
   
    
     
-  }
+  } */

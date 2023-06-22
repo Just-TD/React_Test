@@ -15,9 +15,10 @@ import DashboardPatient from "./MedApp/DashboardPatient";
 
 import {motion} from "framer-motion";
 import SignInPatient from "./MedApp/SignInPatient";
-import ClassBased from "./components/ClassBased";
-import Class_Intro from "./components/Class_Intro";
+
 import SignInDoctor from "./MedApp/SignInDoctor";
+import NavBarMed from "./MedApp/NavBarMed";
+
 
 
 
@@ -31,8 +32,11 @@ function App() {
   }
   return (
     <>
-
-      <NavBar/>
+    <NavBarMed/>
+    <Landing/>
+    
+     
+      
 
 {/*     
     <motion.button animate = {{ y:100}}> Click to Animate </motion.button>
@@ -68,10 +72,8 @@ function App() {
 
        <Route path="/SignInDoctor" element = {<SignInDoctor/>}/>
 
-       <Route path="/ClassBased" element = {<ClassBased title = "CBC"/>}/>
-
-       <Route path="/Class_Intro" element = {<Class_Intro/>}/>
-
+     
+       
     
        
       </Routes>

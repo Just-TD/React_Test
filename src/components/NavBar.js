@@ -18,15 +18,13 @@ const NavBar = () => {
     <div> 
      
       <header>
-              <h3>LOGO</h3>
+              <h3>Medicy</h3>
             <nav ref={navRef}>
-              {/* <a href="/SignUp"> Sign Up </a>
-              <a href="/SignIn"> Sign In </a>
-              <a href="/Landing"> Landing </a> */}
-
-              <Link to= "/SignUp"> Sign Up </Link>
-              <Link to= "/SignIn"> Sign In </Link>
-              <Link to= "/Landing"> Landing Page </Link>
+             
+              <Link to= "/SignUp"> Home </Link>
+              <Link to= "/SignIn"> About </Link>
+              <Link to= "/Landing"> Find Doctors </Link>
+              <Link to= "/Landing"> Contact </Link>
                   <button
                       className="nav-btn nav-close-btn"
                       onClick={showNavbar}>
@@ -38,6 +36,11 @@ const NavBar = () => {
                 onClick={showNavbar}>
                 <FaBars />
             </button>
+            <div className="side"> 
+            <button className=" nav-btn1 ">Sign Up</button>
+            <button className="nav-btn1 ">Log in</button>
+            
+            </div>
           </header>
 
        
